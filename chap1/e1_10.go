@@ -28,6 +28,10 @@ func main() {
 
 func fetch(url string, ch chan<- string) {
 	start := time.Now()
+	
+	if !strings.HasPrefix(url, "https://") {
+		url = "https://" + url
+	}
 
 	resp, err := http.Get(url)
 
