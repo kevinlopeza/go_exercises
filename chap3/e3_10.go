@@ -34,8 +34,8 @@ func comma(s string) string {
 	}
 
 	
-	for j := i; j < n; j = j + 3 {
-		buf.WriteString( "," + s[j:j+3])
+	for ; i < n; i = i + 3 {
+		buf.WriteString( "," + s[i:i+3])
 	}
 
 	return buf.String() 
